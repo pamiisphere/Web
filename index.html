@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ฝ่ายประมวลและวิเคราะห์สถานการณ์น้ำ</title>
+    <link rel="icon" href="images/logo_rid_thai_C.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Ponsakorn Thongdee -->
+    <link href="assets/css/mdb.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/waterpagebuilder.css">
+    <link rel="stylesheet" href="assets/css/owl-controls.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  
+  <style id="custom-cursor" type="text/css">body button, body [type='button'], body input[type='reset'], body input[type='submit'], body [role="button"], ::-webkit-search-cancel-button, ::-webkit-search-decoration, ::-webkit-scrollbar-button, ::-webkit-file-upload-button, [role^=button], .cc_pointer, [type="search"]::-webkit-search-cancel-button, a, select, [type="search"]::-webkit-search-decoration, .paper-button, .ytp-progress-bar-container, input[type=submit], :link, :visited, a > *, img,  ::-webkit-scrollbar-button, .ogdlpmhglpejoiomcodnpjnfgcpmgale_pointer, ::-webkit-file-upload-button, .ytp-volume-panel, #myogdlpmhglpejoiomcodnpjnfgcpmgale .icon, body .custom-cursor-on-hover {cursor: url("data:image/png;base64,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") 7 1, pointer !important;} html,body,body select,body .custom-cursor-default-hover {cursor: url("data:image/png;base64,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") 1 1, auto !important;}</style><style type="text/css">/* Chart.js */
+  @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+  .fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+  .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:16px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0px;margin:0px;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:20px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0px 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:14px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:14px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:18px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+  .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+  
+  <body>
+    <div class="rid-border_top"></div>
+  <section class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+          </button>
+          <a href="index.php"><img src="images/logo_rid_thai_C.png" alt="logo" title="logo" class="d-inline-block img-logo">
+          </a>
+          <p class="rid-navbar-text d-none d-lg-block">ฝ่ายประมวลและวิเคราะห์สถานการณ์น้ำ</p>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav navbar-topmenu ml-auto sp-megamenu-parent">
+                  <li class="nav-item ">
+                      <a class="nav-link  waves-effect waves-light" href="index.php">หน้าแรก</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect waves-light" href="about.php">เกี่ยวกับเรา</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect waves-light" href="strategic.php">แผนยุทธศาสตร์</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect waves-light" href="knowledge.php">คลังความรู้</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect waves-light" href="https://www.facebook.com/BWMHRID" target="_blank">ข่าวสารและกิจกรรม</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect waves-light" href="contact.php">ติดต่อเรา</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect waves-light" href="sitemap.php">ผังเว็บไซต์</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  </section>
+    <section>
+  
+  
+  
+      <div class="swiper-container swiper-container-horizontal">
+        <div class="swiper-wrapper" style="transform: translate3d(-4984px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="2" style="width: 1246px;">
+            <img class="slide-inner" src="upload/slide-03.jpg" alt="" title="">
+          </div>
+          <!-- slide-video -->
+          <!-- <div class="swiper-slide ">
+            <div id="rid-kbgaghri" class="rid-100 comp-kbgaghri-container">
+              <div id="comp-content-video" class="">
+                <h1 class="">ฝ่ายประมวลและวิเคราะห์สถานการณ์น้ำ</h1>
+                <p>Water Watch and Monitoring for Warning Branch</p>
+              </div>
+              <div class="rid-video">
+                <video width="100%" controls autoplay muted>
+                  <source src="videos/mp4/file.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>  -->
+          <!--  -->
+          <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1246px;">
+            <img class="slide-inner" src="upload/slide-01.png" alt="" title="">
+          </div>
+          <div class="swiper-slide" data-swiper-slide-index="1" style="width: 1246px;">
+            <img class="slide-inner" src="upload/slide-02.jpg" alt="" title="">
+          </div>
+          <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="2" style="width: 1246px;">
+            <img class="slide-inner" src="upload/slide-03.jpg" alt="" title="">
+          </div>
+        <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 1246px;">
+            <img class="slide-inner" src="upload/slide-01.png" alt="" title="">
+          </div></div>
+        <div class="swiper-button-next custom-cursor-on-hover" title="Next"></div>
+        <div class="swiper-button-prev " title="Prev"></div>
+      </div>
+    </section>
+  
+    <section id="main-Vision">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-8 ">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="content-area">
+                      <h5>ฝ่ายประมวลวิเคราะห์สถานการณ์น้ำ</h5>
+                      <h1>วิสัยทัศน์ผู้บริหาร</h1>
+                      <p>ในศตวรรษที่ 21 โลกที่เราอาศัยอยู่มีการเปลี่ยนแปลงในทุกมิติ ในเวลาเดียวกัน
+                        เราก็กำลังเผชิญกับสภาพภูมิอากาศที่แปรปรวนทั่วโลก
+                        จากปัญหาน้ำท่วมและน้ำแล้งที่มีความถี่เพิ่มขึ้น
+                        สะท้อนว่าการบริหารจัดการน้ำถือว่าเป็นวาระสำคัญระดับชาติอีกเรื่องหนึ่งที่ไม่ควรมองข้าม
+                        และควรทำการประเมินความเสี่ย<br>งวิกฤตได้ล่วงหน้า เพื่อลดความเสียหายลงได้
+                      </p>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="col-lg-10">
+                    <div class="rid-water-icon">
+      <div class="row">
+          <!-- สถานการณ์น้ำรายวัน -->
+          <div class="water-col-3">
+              <div class="content-area-water">
+                  <a href="http://water.rid.go.th/flood/flood/daily.pdf" target="_blank" rel="noopener" title="สถานการณ์น้ำรายวัน">
+                      <img src="images/rid-water-icon/01.jpg" alt="" width="90" height="90">
+                      <p>สถานการณ์น้ำรายวัน</p>
+                  </a>
+              </div>
+          </div>
+          <!--  -->
+          <!-- สถานการณ์น้ำรายสัปดาห์ -->
+          <div class="water-col-3">
+              <div class="content-area-water">
+                  <a href="http://water.rid.go.th/flood/flood/weekreportnew.pdf" target="_blank" rel="noopener" title="สถานการณ์น้ำรายวัน">
+                      <img src="images/rid-water-icon/02.jpg" alt="" width="90" height="90">
+                      <p>สถานการณ์น้ำรายสัปดาห์</p>
+                  </a>
+              </div>
+          </div>
+          <!--  -->
+          <!-- ปริมาณน้ำในอ่าง/เขื่อน -->
+          <div class="water-col-3">
+              <div class="content-area-water">
+                  <a href="https://app.rid.go.th/reservoir/" target="_blank" rel="noopener" title="ปริมาณน้ำในอ่าง/เขื่อน">
+                      <img src="images/rid-water-icon/03.jpg" alt="" width="90" height="90">
+                      <p>ปริมาณน้ำในอ่าง/เขื่อน</p>
+                  </a>
+              </div>
+          </div>
+          <!--  -->
+          <!-- ศูนย์ปฏิบัติการน้ำอัจฉริยะ -->
+          <div class="water-col-3">
+              <div class="content-area-water">
+                  <a href="http://wmsc.rid.go.th/" target="_blank" rel="noopener" title="ศูนย์ปฏิบัติการน้ำอัจฉริยะ">
+                      <img src="images/rid-water-icon/04.jpg" alt="" width="90" height="90">
+                      <p>ศูนย์ปฏิบัติการน้ำอัจฉริยะ</p>
+                  </a>
+              </div>
+          </div>
+          <!--  -->
+          <!-- คาดการณ์น้ำท่า -->
+          <div class="water-col-3">
+              <div class="content-area-water">
+                  <a href="http://water.rid.go.th/itcwater/utok/index.html" target="_blank" rel="noopener" title="คาดการณ์น้ำท่า">
+                      <img src="images/rid-water-icon/05.jpg" alt="" width="90" height="90">
+                      <p>คาดการณ์น้ำท่า</p>
+                  </a>
+              </div>
+          </div>
+          <!--  -->
+          <!-- ปริมาณน้ำท่า/ผังน้ำ -->
+          <div class="water-col-3">
+              <div class="content-area-water">
+                  <a href="https://www.rid.go.th/index.php/th/runoff" target="_blank" rel="noopener" title="ปริมาณน้ำท่า/ผังน้ำ">
+                      <img src="images/rid-water-icon/06.jpg" alt="" width="90" height="90">
+                      <p>ปริมาณน้ำท่า/ผังน้ำ</p>
+                  </a>
+              </div>
+          </div>
+          <!--  -->
+          <!-- Pasak Radar X-band -->
+          <div class="water-col-3">
+              <div class="content-area-water">
+                  <a href="https://d1w7fjk53onr5q.cloudfront.net/?param=202409111145" target="_blank" rel="noopener" title="Pasak Radar X-band">
+                      <img src="images/rid-water-icon/07.jpg" alt="" width="90" height="90">
+                      <p>Pasak Radar X-band</p>
+                  </a>
+              </div>
+          </div>
+          <!--  -->
+          <!-- โทรมาตรเพื่อการพยากรณ์น้ำ -->
+          <div class="water-col-3">
+              <div class="content-area-water">
+                  <a href="https://telerid.rid.go.th/" target="_blank" rel="noopener" title="โทรมาตรเพื่อการพยากรณ์น้ำ">
+                      <img src="images/rid-water-icon/08.jpg" alt="" width="90" height="90">
+                      <p>โทรมาตรเพื่อการพยากรณ์น้ำ</p>
+                  </a>
+              </div>
+          </div>
+          <!--  -->
+      </div>
+  </div>                </div>
+                  <div class="col-lg-2"></div>
+                </div>
+                <!--  -->
+              </div>
+              <div class=" col-lg-4 ">
+                <div class="content-area-pic">
+                  <img src="upload/S__46358564.jpg" alt="Responsive image" title="บุคลากร" class="img-fluid" style="width: 100%;">
+                  <div class="content-title">
+                    <h4>นาย วชิระ สุรินทร์</h4>
+                    <h5>หัวหน้าฝ่ายประมวลและวิเคราะห์สถานการณ์น้ำ</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="main-water">
+      <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-12">
+              <center>
+                  <iframe src="https://pamiisphere.github.io/mapbox-3D/" width="100%" height="340px" frameborder="0" title="ปริมาณน้ำ">
+                  </iframe>
+                  <br><br>
+                  <iframe src="https://www.rid.go.th/water/gauges/" width="100%" height="290px" frameborder="0" title="กราฟปริมาณน้ำในเขื่อน">
+                  </iframe>
+              </center>
+          </div>
+      </div>
+  </div>  </section>
+  
+    <section id="main-New">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 content-area-new">
+            <h2>ข่าวสาร/ กิจกรรม</h2>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="news-slider" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+              <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 4356px; left: 0px; display: block; transition: 800ms; transform: translate3d(-726px, 0px, 0px);"><div class="owl-item" style="width: 363px;"><div class="post-slide">
+                <div class="post-img">
+                  <img src="upload/new/2025/jan/10/16.jpg" alt="Responsive image" title="" class="img-fluid">
+                  <a href="new-detail-01.php" class="over-layer"></a>
+                </div>
+                <div class="post-content">
+                  <h3 class="post-title">
+                    <a href="new-detail-01.php">กรมชลฯ สานต่อแนวพระราชดำริ ปลูกป่าฟื้นฟูระบบนิเวศ รอบอ่างฯ นฤบดินทรจินดา
+                      จ.ปราจีนบุรี</a>
+                  </h3>
+                  <p class="post-description">กรมชลประทาน จัดกิจกรรม CSR “ปลูกป่า สร้างแหล่งน้ำ สมดุลระบบนิเวศ”
+                    อ่างเก็บน้ำนฤบดินทรจินดา (เขื่อนห้วยโสมง) อันเนื่องมาจากพระราชดำริ จ.ปราจีนบุรี
+                    บูรณาการทุกภาคส่วนสานต่อแผนอนุรักษ์สิ่งแวดล้อมและส่งเสริมให้ความรู้แก่ประชาชน
+                    พร้อมปลูกป่าฟื้นฟูระบบนิเวศโดยรอบอ่างเก็บน้ำ เพื่อสร้างความสมดุล ระหว่างคน สัตว์ป่า และป่าไม้
+                    อย่างยั่งยืน</p>
+                  <span class="post-date"><i class="far fa-calendar-alt"></i>10 มกราคม 2568</span>
+                  <a href="new-detail-01.php" class="read-more">อ่านต่อ</a>
+                </div>
+              </div></div><div class="owl-item" style="width: 363px;"><div class="post-slide">
+                <div class="post-img">
+                  <img src="upload/new/2025/jan/09/03.jpg" alt="Responsive image" title="" class="img-fluid">
+                  <a href="new-detail-02.php" class="over-layer"></a>
+                </div>
+                <div class="post-content">
+                  <h3 class="post-title">
+                    <a href="new-detail-02.php">นายกฯ ล่องใต้เยือนภูเก็ต ลุยบริหารจัดการอ่างเก็บน้ำ
+                      และแผนการเพิ่มประสิทธิภาพการเก็บกักน้ำของจังหวัดภูเก็ต</a>
+                  </h3>
+                  <p class="post-description">ณ ห้องประชุมท่าอากาศยานนานาชาติภูเก็ต อำเภอถลาง จังหวัดภูเก็ต นางสาวแพทองธาร
+                    ชินวัตร นายกรัฐมนตรี และคณะ เข้าร่วมประชุมบูรณาการการแก้ปัญหาพื้นที่จังหวัดภูเก็ต
+                    เพื่อรองรับการเติบโตของการท่องเที่ยว และแนวทางการแก้ปัญหาขาดแคลนน้ำอุปโภค - บริโภค โดยกรมชลประทาน
+                    ได้วางแนวทางการกักเก็บน้ำในอ่างเก็บน้ำ</p>
+                  <span class="post-date"><i class="far fa-calendar-alt"></i>09 มกราคม 2568</span>
+                  <a href="new-detail-02.php" class="read-more">อ่านต่อ</a>
+                </div>
+              </div></div><div class="owl-item" style="width: 363px;"><div class="post-slide">
+                <div class="post-img">
+                  <img src="upload/new/2025/jan/08/03.jpg" alt="Responsive image" title="" class="img-fluid">
+                  <a href="new-detail-03.php" class="over-layer"></a>
+                </div>
+                <div class="post-content">
+                  <h3 class="post-title">
+                    <a href="new-detail-03.php">รองอธิบดี “ฐนันดร์” ลงพื้นที่ จังหวัดภูเก็ต ต้อนรับ รมช.อัคราฯ
+                      ตรวจราชการในพื้นที่</a>
+                  </h3>
+                  <p class="post-description">ณ สำนักงานท่าเทียบเรือประมงภูเก็ต อำเภอเมือง จังหวัดภูเก็ต นายอัครา พรหมเผ่า
+                    รัฐมนตรีช่วยว่าการกระทรวงเกษตรและสหกรณ์ และคณะ ลงพื้นที่ตรวจราชการในพื้นที่จังหวัดภูเก็ต
+                    เดินหน้าขับเคลื่อนงานตามนโยบายของกระทรวงเกษตรฯ โดยมี นายฐนันดร์ สุทธิพิศาล รองอธิบดีกรมชลประทาน
+                    พร้อมด้วย นายก่อพงศ์ เจ้ยแก้ว ผู้อำนวยการสำนักงานชลประทานที่ 15 นายเกริกศักดิ์ ลีนานนท์
+                    ผู้อำนวยการโครงการชลประทานภูเก็ต และผู้ที่เกี่ยวข้อง ร่วมลงพื้นที่
+                    พร้อมรับฟังรายงานสรุปภาพรวมของท่าเทียบเรือประมงภูเก็ต แนวทางการปรับปรุง พัฒนา
+                    และแก้ไขปัญหาของชาวประมงและผู้ประกอบการ</p>
+                  <span class="post-date"><i class="far fa-calendar-alt"></i>08 มกราคม 2568</span>
+                  <a href="new-detail-03.php" class="read-more">อ่านต่อ</a>
+                </div>
+              </div></div><div class="owl-item" style="width: 363px;"><div class="post-slide">
+                <div class="post-img">
+                  <img src="upload/new/2025/jan/07/01.jpg" alt="Responsive image" title="" class="img-fluid">
+                  <a href="new-detail-04.php" class="over-layer"></a>
+                </div>
+                <div class="post-content">
+                  <h3 class="post-title">
+                    <a href="new-detail-04.php">กรมชลฯ ร่วมประชุมคณะกรรมาธิการฯ จัดการทรัพยากรน้ำ</a>
+                  </h3>
+                  <p class="post-description">ณ สำนักงานท่าเทียบเรือประมงภูเก็ต อำเภอเมือง จังหวัดภูเก็ต นายอัครา พรหมเผ่า
+                    รัฐมนตรีช่วยว่าการกระทรวงเกษตรและสหกรณ์ และคณะ ลงพื้นที่ตรวจราชการในพื้นที่จังหวัดภูเก็ต
+                    เดินหน้าขับเคลื่อนงานตามนโยบายของกระทรวงเกษตรฯ โดยมี นายฐนันดร์ สุทธิพิศาล รองอธิบดีกรมชลประทาน
+                    พร้อมด้วย นายก่อพงศ์ เจ้ยแก้ว ผู้อำนวยการสำนักงานชลประทานที่ 15 นายเกริกศักดิ์ ลีนานนท์
+                    ผู้อำนวยการโครงการชลประทานภูเก็ต และผู้ที่เกี่ยวข้อง ร่วมลงพื้นที่
+                    พร้อมรับฟังรายงานสรุปภาพรวมของท่าเทียบเรือประมงภูเก็ต แนวทางการปรับปรุง พัฒนา
+                    และแก้ไขปัญหาของชาวประมงและผู้ประกอบการ</p>
+                  <span class="post-date"><i class="far fa-calendar-alt"></i>07 มกราคม 2568</span>
+                  <a href="new-detail-04.php" class="read-more">อ่านต่อ</a>
+                </div>
+              </div></div><div class="owl-item" style="width: 363px;"><div class="post-slide">
+                <div class="post-img">
+                  <img src="upload/new/2025/jan/04/01.jpg" alt="Responsive image" title="" class="img-fluid">
+                  <a href="new-detail-05.php" class="over-layer"></a>
+                </div>
+                <div class="post-content">
+                  <h3 class="post-title">
+                    <a href="new-detail-05.php">รมช.เกษตรฯ ”อิทธิ“ ลงพื้นที่ปราจีนบุรี ติดตามการพัฒนาลุ่มน้ำประจันตคาม</a>
+                  </h3>
+                  <p class="post-description">นายอิทธิ ศิริลัทธยากร รัฐมนตรีช่วยว่าการกระทรวงเกษตรและสหกรณ์
+                    นำคณะลงพื้นที่ติดตามโครงการปรับปรุงเพื่อเพิ่มประสิทธิภาพการบริหารจัดการน้ำในลุ่มน้ำประจันตคาม
+                    จังหวัดปราจีนบุรี</p>
+                  <span class="post-date"><i class="far fa-calendar-alt"></i>04 มกราคม 2568</span>
+                  <a href="new-detail-05.php" class="read-more">อ่านต่อ</a>
+                </div>
+              </div></div><div class="owl-item" style="width: 363px;"><div class="post-slide">
+                <div class="post-img">
+                  <img src="upload/new/2025/jan/03/01.jpg" alt="Responsive image" title="" class="img-fluid">
+                  <a href="new-detail-06.php" class="over-layer"></a>
+                </div>
+                <div class="post-content">
+                  <h3 class="post-title">
+                    <a href="new-detail-06.php">กรมชลฯ เปิดช่องทางสร้างรายได้ ช่วยเหลือเกษตรกรรับปีใหม่ 2568 ตั้งเป้ากว่า
+                      8.4 หมื่นคน</a>
+                  </h3>
+                  <p class="post-description">กรมชลประทาน เดินหน้าจ้างแรงงานช่วยเหลือพี่น้องเกษตรกรต้อนรับปีใหม่ ปี 2568
+                    หวังให้เกษตรกรมีรายได้เสริม ตามนโยบายของกระทรวงเกษตรและสหกรณ์ ตั้งเป้าจ้างแรงงานกว่า 8.4 หมื่นคน</p>
+                  <span class="post-date"><i class="far fa-calendar-alt"></i>03 มกราคม 2568</span>
+                  <a href="new-detail-06.php" class="read-more">อ่านต่อ</a>
+                </div>
+              </div></div></div></div>
+  
+              
+  
+              
+  
+              
+  
+              
+  
+              
+            <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div><div class="owl-buttons"><div class="owl-prev"></div><div class="owl-next"></div></div></div></div>
+          </div>
+        </div>
+      </div>
+  
+  
+    </section>
+  
+    <section id="main-responsibility">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 content-area-responsibility">
+            <div class="row">
+              <div class="col-lg-4 content-title">
+                <h5>ฝ่ายประมวลวิเคราะห์สถานการณ์น้ำ</h5>
+                <h2>หน้าที่ความรับผิดชอบของเรา</h2>
+                <a href="strategic.php" class="btn btn-dark waves-effect waves-light">ยุทธศาสตร์ <i class="fas fa-arrow-right"></i></a>
+  
+              </div>
+              <div class="col-lg-8">
+                <div class="row">
+                  <!--  -->
+                  <div class="grid-area-responsibility">
+                    <!-- card -->
+                    <div class="card">
+                      <div class="card-item">
+                        <div class="card-img">
+                          <img src="images/undraw_Golden_gate_bridge_re_e.png" alt="Responsive image" title="" class="img-fluid" style="width: 100%;">
+                        </div>
+                        <div class="card-content">
+                          <h4>ศึกษา วิเคราะห์ ประมวลผลข้อมูลพื้นที่ที่เคยประสบภัย</h4>
+                          <p>หรือเป็นพื้นที่เสี่ยงภัยอันเกิดจากน้ำ
+                            อาคารชลประทานที่สำคัญการกำหนดพื้นที่เฝ้าระวัง
+                            เพื่อใช้เป็นหลักเกณฑ์ในการเฝ้าติดตามสถานการณ์น้ำอย่างประสิทธิภาพ</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- card -->
+                    <!-- card -->
+                    <div class="card">
+                      <div class="card-item">
+                        <div class="card-img">
+                          <img src="images/undraw_Processing_re_tbdu.png" alt="Responsive image" title="" class="img-fluid" style="width: 100%;">
+                        </div>
+                        <div class="card-content">
+                          <h4>ติดตาม รวบรวม ตรวจสอบ วิเคราะห์ ประมวลผลข้อมูล</h4>
+                          <p>น้ำฝน น้ำท่า ปริมาณน้ำในอ่างเก็บน้ำขนาดใหญ่ ขนาดกลาง
+                            ปริมาณน้ำผ่านอาคารชลประทานต่าง ๆ ที่จำเป็น โดยการประยุกต์ใช้ระบบภูมิสารสนเทศ
+                            เพื่อให้การจัดระบบการจัดการฐานข้อมูลของกรมชลประทาน มีความถูกต้องตามหลักวิชาการ
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- card -->
+                    <!-- card -->
+                    <div class="card">
+                      <div class="card-item">
+                        <div class="card-img">
+                          <img src="images/undraw_Search_re_x5gq.png" alt="Responsive image" title="" class="img-fluid" style="width: 100%;">
+                        </div>
+                        <div class="card-content">
+                          <h4>ประยุกต์ใช้ข้อมูลจากคลังข้อมูลน้ำของกรมชลประทาน</h4>
+                          <p>เพื่อให้สามารถสืบค้นข้อมูลที่เกี่ยวข้องได้ครบถ้วน
+                            และใช้เป็นฐานข้อมูลช่วยในการติดตามสถานการณ์น้ำ และการใช้น้ำชลประทาน</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- card -->
+                    <!-- card -->
+                    <div class="card">
+                      <div class="card-item">
+                        <div class="card-img">
+                          <img src="images/undraw_professor_8lrt.png" alt="Responsive image" title="" class="img-fluid" style="width: 100%;">
+                        </div>
+                        <div class="card-content">
+                          <h4>ประมวลผลข้อมูลจากแบบจำลองทางคณิตศาสตร์</h4>
+                          <p>สำหรับการพยากรณ์น้ำ การคาดการณ์แนวโน้มสถานการณ์น้ำ
+                            เพื่อจัดทำรายงานสรุปสถานการณ์น้ำที่มีความถูกต้องทันสมัย
+                            สำหรับผู้บริหารใช้เป็นข้อมูลประกอบการตัดสินใจในการบริหารจัดการน้ำทั้งในภาวะปกติ
+                            และภาวะวิกฤติ และหน่วยงานอื่น ๆ ที่เกี่ยวข้อง ให้มีความถูกต้อง รวดเร็ว
+                            ทันต่อสถานการณ์</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- card -->
+                  </div>
+                  <!--  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="main-Swoc">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 content-area-swoc">
+            <div class="row">
+              <div class="col-lg-4 content-title">
+                <img src="upload/logoSwoc2_edited.png" alt="Responsive image" title="">
+                <h2>SWOC กรมชลประทาน</h2>
+                <p>บริหารจัดการน้ำยุค 4.0 ลดความรุนแรงน้ำท่วม-น้ำแล้ง</p>
+              </div>
+              <div class="col-lg-8">
+                <div class="rid-video-swoc">
+                  <video width="100%" controls="" autoplay="">
+                    <source src="videos/mp4/file-swoc.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="main-institution">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 content-area-logo">
+            <h2>หน่วยงานที่เกี่ยวข้อง</h2>
+  
+            <div class="grid-logo">
+              <!--  -->
+              <div class="card">
+                <a href="https://www.disaster.go.th/" target="_blank" title="กรมป้องกันและบรรเทาสาธรณภัย">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-1.png" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://www.oic.go.th/ginfo/" target="_blank" title="ฐานข้อมูลหน่วยงานรัฐ">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-2.jpg" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://www.gistda.or.th/home.php" target="_blank" title="สำนักงานพัฒนาเทคโนโลยีอวกาศและภูมิสารสนเทศ">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-3.png" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://www.hydro.navy.mi.th/" target="_blank" title="กรมอุทกศาสตร์">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-4.png" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="http://www.onwr.go.th/" target="_blank" title="สำนักทรัพยากรน้ำแห่งชาติ">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-5.png" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://www.tmd.go.th/" target="_blank" title="กรมอุตุนิยมวิทยา">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-6.png" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://www.hii.or.th/" target="_blank" title="สถาบันสารสนเทศทรัพยากรน้ำ">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-7.png" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://weis.fti.or.th/" target="_blank" title="สถาบันน้ำและสิ่งแวดล้อมเพื่อความยั่งยืน สภาอุตสาหกรรมแห่งประเทศไทย">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-8.png" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://www.egat.co.th/home/" target="_blank" title="การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-9.png" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://dds.bangkok.go.th/" target="_blank" title="สำนักการระบายน้ำ">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-10.png" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://www.dwr.go.th/index.php" target="_blank" title="กรมทรัพยากรน้ำ">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-11.jpg" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://www.dpt.go.th/th" target="_blank" title="กรมโยธาธิการและผังเมือง">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-12.png" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://drr.go.th/" target="_blank" title="กรมทางหลวงชนบท">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-13.png" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://www.rdpb.go.th/th" target="_blank" title="กปร.">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-14.jpg" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://www.royalrain.go.th/" target="_blank" title="กรมฝนหลวงและการบินเกษตร">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-15.png" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://www.mwa.co.th/home/" target="_blank" title="การประปานครหลวง">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-16.jpg" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="card">
+                <a href="https://www.pwa.co.th/" target="_blank" title="การประปาส่วนภูมิภาค">
+                  <div class="card-item">
+                    <img src="upload/logo/logo-17.jpg" alt="Responsive image" class="card-img">
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+  
+  
+  
+  
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-content-footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3">
+              <center><img src="images/logo_rid_thai_C.png" alt="logo" title="logo" class="img-logo-footer"></center>
+              <h5 class="">ฝ่ายประมวลและวิเคราะห์สถานการณ์น้ำ</h5>
+              <p class="chakra-text css-0">ที่อยู่ : 811 ถนนสามเสน แขวงถนนนครไชยศรี เขตดุสิต กรุงเทพมหานคร 10300</p>
+              </div>
+              <div class="col-lg-3">
+              <h5 class="">ติดต่อเรา</h5>
+              <p>โทรศัพท์: 02-6692560</p>
+              <p>โทรสาร: 02-2431098, 02-2436956</p>
+              <p>อีเมล: wmsc.1460@gmail.com</p>
+  
+              </div>
+              <div class="col-lg-3">
+              <h5 class="">เว็บไซต์ภายใน</h5>
+              <a href="https://www.rid.go.th/index.php/th/" target="_blank" class="" title="กรมชลประทาน"><p> กรมชลประทาน</p></a>
+              <a href="https://wmsc.rid.go.th/" target="_blank" class="" title="ศูนย์ปฏิบัติการน้ำอัจริยะ"><p>ศูนย์ปฏิบัติการน้ำอัจริยะ</p></a>
+              <a href="https://swoc.rid.go.th/" target="_blank" class="" title="Swoc.rid.go.th"><p>Swoc.rid.go.th</p></a>
+              <a href="https://swocmodel.rid.go.th/" target="_blank" class="" title="SWOC MODEL"><p>SWOC MODEL</p></a>
+              <a href="https://bigdata-swoc.rid.go.th/" target="_blank" class="" title="BigData"><p>BigData</p></a>
+              <a href="https://telerid.rid.go.th/#/" target="_blank" class="" title="โทรมาตรเพื่อการพยากรณ์น้ำและเตือนภัย"><p>โทรมาตรเพื่อการพยากรณ์น้ำและเตือนภัย</p></a>
+              <a href="https://www.youtube.com/channel/UCO-9E_WRW_YNaU-29thdhsg" target="_blank" class="" title="Youtube Channel: SWOC NEWS"><p>Youtube Channel: SWOC NEWS</p></a>
+              
+  
+              </div>
+              <div class="col-lg-3">
+              <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/BWMHRID" data-tabs="timeline" data-width="" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=&amp;container_width=363&amp;height=250&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FBWMHRID&amp;locale=th_TH&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline&amp;width="><span style="vertical-align: bottom; width: 340px; height: 250px;"><iframe name="ff16d50306d6cad62" width="1000px" height="250px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://web.facebook.com/v21.0/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df314ed3188354d528%26domain%3Dwmsb.rid.go.th%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwmsb.rid.go.th%252Ffe279f4ae3f6b399a%26relation%3Dparent.parent&amp;container_width=363&amp;height=250&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FBWMHRID&amp;locale=th_TH&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline&amp;width=" style="border: none; visibility: visible; width: 340px; height: 250px;" class=""></iframe></span></div>
+          </div>
+  
+          </div>
+      </div>
+  </section>
+  <section class="content-footer-bottom">
+      <div class="container">
+          <p class="chakra-text css-0">© 2024 by SWOC RID. Made with Smart Elo™</p>
+      </div>
+  </section>
+  
+  <a href="#" class="sp-scroll-up" aria-label="Scroll Up" style="display: inline;"><span class="fas fa-angle-up" aria-hidden="true"></span></a>
+  
+  <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+  <script src="https://connect.facebook.net/th_TH/sdk.js?hash=b5f1270ea56b14cf699b008d839f48ec" async="" crossorigin="anonymous"></script><script async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&amp;version=v21.0"></script>  <!-- JQuery -->
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script><div class="hiddendiv common"></div>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/js/script-owl.js"></script>
+    <script type="text/javascript" src="assets/js/swiper.jquery.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.touchSwipe.min.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 0,
+        centeredSlides: true,
+        speed: 3000,
+        autoplay: 10000,
+        autoplayDisableOnInteraction: false,
+        effect: 'slide', // 'slide' or 'fade' or 'cube' or 'coverflow' or 'flip'
+        coverflow: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true
+        },
+        flip: {
+          slideShadows: true,
+          limitRotation: true
+        },
+        cube: {
+          slideShadows: true,
+          shadow: true,
+          shadowOffset: 20,
+          shadowScale: 0.94
+        },
+        fade: {
+          crossFade: false
+        },
+        loop: true,
+      });
+    </script>
+  
+  
+  
+  </body></html>
